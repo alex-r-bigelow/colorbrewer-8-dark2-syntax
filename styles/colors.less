@@ -1,17 +1,45 @@
-// These colors are specific to the theme. Do not use in a package!
 
-@very-light-gray: #f7f7f7;
-@light-gray: #cccccc;
-@gray: #969696;
-@dark-gray: #636363;
-@very-dark-gray: #252525;
+// Config -----------------------------------
+@syntax-hue:          220;
+@syntax-saturation:   13%;
+@syntax-brightness:   18%;
 
-@teal: #1b9e77;
-@orange: #d95f02;
-@purple: #7570b3;
-@pink: #e7298a;
-@green: #66a61e;
-@yellow: #e6ab02;
-@brown: #a6761d;
 
-@light-yellow: #ffd92f;
+// Monochrome -----------------------------------
+@mono-1: hsl(@syntax-hue, 14%, 71%); // default text
+@mono-2: hsl(@syntax-hue,  9%, 55%);
+@mono-3: hsl(@syntax-hue, 10%, 40%);
+
+// Colors -----------------------------------
+
+/*
+@hue-1:   hsl(187, 47%, 55%); // <-cyan
+@hue-2:   hsl(207, 82%, 66%); // <-blue
+@hue-3:   hsl(286, 60%, 67%); // <-purple
+@hue-4:   hsl( 95, 38%, 62%); // <-green
+
+@hue-5:   hsl(355, 65%, 65%); // <-red 1
+@hue-5-2: hsl(  5, 48%, 51%); // <-red 2
+
+@hue-6:   hsl( 29, 54%, 61%); // <-orange 1
+@hue-6-2: hsl( 39, 67%, 69%); // <-orange 2
+*/
+
+@hue-1:   hsl( 39, 70%, 38%); // <-brown
+@hue-2:   hsl( 26, 98%, 43%); // <-orange
+@hue-3:   hsl( 44, 98%, 45%); // <-yellow
+@hue-4:   hsl(244, 31%, 57%); // <-purple
+
+@hue-5:   hsl(161, 43%, 58%); // <-light teal
+@hue-5-2: hsl(162, 71%, 36%); // <-teal
+
+@hue-6:   hsl( 88, 69%, 38%); // <-green
+@hue-6-2: hsl( 83, 63%, 59%); // <-light green
+
+
+// Base colors -----------------------------------
+@syntax-fg:     @mono-1;
+@syntax-bg:     hsl(@syntax-hue, @syntax-saturation, @syntax-brightness);
+@syntax-gutter: darken(@syntax-fg, 26%);
+@syntax-guide:  fade(@syntax-fg, 15%);
+@syntax-accent: hsl(@syntax-hue, 100%, 66% );
